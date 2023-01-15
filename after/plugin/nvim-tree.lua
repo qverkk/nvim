@@ -5,15 +5,15 @@ require("nvim-tree").setup({
 	view = {
 		mappings = {
 			list = {
-			{ key = { "l", "<CR>", "o" }, action = "edit", mode = "n" },
-			{ key = "h", action = "close_node" },
-			{ key = "v", action = "vsplit" },
-			{ key = "C", action = "cd" },
-			{ key = "u", action = "dir_up" },
-			{ key = "gtf", action = "telescope_find_files", action_cb = telescope_find_files },
-			{ key = "gtg", action = "telescope_live_grep", action_cb = telescope_live_grep },
-		}
-		}
+				{ key = { "l", "<CR>", "o" }, action = "edit", mode = "n" },
+				{ key = "h", action = "close_node" },
+				{ key = "v", action = "vsplit" },
+				{ key = "C", action = "cd" },
+				{ key = "u", action = "dir_up" },
+				{ key = "gtf", action = "telescope_find_files", action_cb = telescope_find_files },
+				{ key = "gtg", action = "telescope_live_grep", action_cb = telescope_live_grep },
+			},
+		},
 	},
 	filters = {
 		dotfiles = true,
@@ -27,4 +27,3 @@ require("nvim-tree").setup({
 })
 
 vim.keymap.set("n", "<space>e", ":NvimTreeToggle<CR>")
-

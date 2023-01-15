@@ -8,7 +8,7 @@ lsp.ensure_installed({
 	"kotlin_language_server",
 	"yamlls",
 	"jsonls",
-	"dockerls"
+	"dockerls",
 })
 
 lsp.setup()

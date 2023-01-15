@@ -1,4 +1,4 @@
-require('Comment').setup({
+require("Comment").setup({
 	active = true,
 	on_config_done = nil,
 	---Add a space b/w comment and the line
