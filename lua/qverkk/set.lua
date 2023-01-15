@@ -1,3 +1,5 @@
+vim.cmd("set clipboard=unnamedplus")
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
