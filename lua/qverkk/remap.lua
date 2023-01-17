@@ -1,4 +1,5 @@
-_G.bind = bind
+_G.bind = vim.api.nvim_set_keymap
+
 local opt = { noremap = false, silent = true }
 
 vim.g.mapleader = " "
