@@ -41,7 +41,7 @@ cmp.setup({
 			if cmp.visible() then
 				print("next item")
 				cmp.select_next_item()
-			elseif vim.fn["vsnip#available"](1) == 1 then
+			elseif vim.fn["vsnip#available"] == 1 then
 				feedkey("<Plug>(vsnip-expand-or-jump)", "")
 			else
 				fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
