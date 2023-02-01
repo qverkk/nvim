@@ -1,4 +1,14 @@
-vim.cmd([[packadd packer.nvim]])
+local execute = vim.api.nvim_command
+local fn = vim.fn
+
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+
+if fn.empty(fn.glob(install_path)) > 0 then
+	execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
+	execute "packadd packer.nvim"
+end
+
+local use = require("packer").use
 
 return require("packer").startup(function(use)
 	-- Packer can manage itself
@@ -32,29 +42,28 @@ return require("packer").startup(function(use)
 	-- commenter
 	use("numToStr/Comment.nvim")
 
+	-- lsp
+	use("neovim/nvim-lspconfig")
+
+	-- mason
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+
 	-- java lsp
 	use("mfussenegger/nvim-jdtls")
 
-	-- lsp
-	use({
-		"VonHeikemen/lsp-zero.nvim",
+	-- completion
+	use {
+		"hrsh7th/nvim-cmp",
 		requires = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
+			{"hrsh7th/cmp-nvim-lsp"},
+			{"hrsh7th/cmp-buffer"},
+			{"hrsh7th/cmp-path"},
+			{"hrsh7th/cmp-cmdline"},
 
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
-			{ "rafamadriz/friendly-snippets" },
-		},
-	})
+			-- snippet support
+			{"hrsh7th/cmp-vsnip"},
+			{"hrsh7th/vim-vsnip"}
+		 }
+	 }
 end)
