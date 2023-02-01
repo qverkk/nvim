@@ -35,15 +35,6 @@ return require("packer").startup(function(use)
 	-- java lsp
 	use("mfussenegger/nvim-jdtls")
 
-	-- formatter
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		-- config = function()
-		--  require("null-ls").setup()
-		-- end,
-		requires = { "nvim-lua/plenary.nvim" },
-	})
-
 	-- lsp
 	use({
 		"VonHeikemen/lsp-zero.nvim",
