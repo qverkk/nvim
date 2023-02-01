@@ -10,7 +10,6 @@ bind("n", "<C-l>", "<C-w>l", opt)
 bind("n", "<C-j>", "<C-w>j", opt)
 bind("n", "<C-k>", "<C-w>k", opt)
 
-bind("n", "<c-a-l>", "<cmd>lua vim.lsp.buf.format()<cr>", opt)
 
 -- jump 10 lines when holding shift
 bind("n", "<s-j>", "10j<cr>", opt)
@@ -25,6 +24,9 @@ bind(
 	"<cmd>lua vim.diagnostic.open_float({focusable = false, show_header = false})<cr>",
 	opt
 )
+
+-- format
+bind("n", "<c-a-l>", "<cmd>lua vim.lsp.buf.format()<cr>", opt)
 
 -- code actions
 bind("n", "<a-cr>", "<cmd>lua vim.lsp.buf.code_action()<cr>", {})
