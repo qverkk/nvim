@@ -66,7 +66,4 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
-
-	-- splits
-	use "beauwilliams/focus.nvim"
 end)
