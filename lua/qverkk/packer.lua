@@ -33,6 +33,9 @@ return require("packer").startup(function(use)
 	-- telescope ui select
 	use("nvim-telescope/telescope-ui-select.nvim")
 
+	-- lualine
+	use("nvim-lualine/lualine.nvim")
+
 	-- tree
 	use("kyazdani42/nvim-tree.lua")
 

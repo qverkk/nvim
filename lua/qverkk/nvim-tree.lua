@@ -3,6 +3,7 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
 	view = {
+		width = table,
 		mappings = {
 			list = {
 				{ key = { "l", "<CR>", "o" }, action = "edit", mode = "n" },

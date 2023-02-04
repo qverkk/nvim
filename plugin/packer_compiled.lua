@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
