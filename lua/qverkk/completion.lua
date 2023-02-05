@@ -24,7 +24,7 @@ cmp.setup({
       priority_weight = 2,
       comparators = {
         -- compare.offset,
-        compare.exact,
+        -- compare.exact,
         -- compare.scopes,
         -- compare.score,
         compare.recently_used,
@@ -67,11 +67,11 @@ cmp.setup({
 		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	},
 	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		{ name = 'nvim_lsp_signature_help' },
-		{ name = 'path' },
-		{ name = 'vsnip' },
-		{ name = 'buffer' },
+		{ name = 'nvim_lsp', priority = 10, max_item_count = 15 },
+		{ name = 'nvim_lsp_signature_help', max_item_count = 15 },
+		{ name = 'path', priority = 1},
+		{ name = 'vsnip', priority = 0 },
+		{ name = 'buffer', priority = 0, max_item_count = 5 },
 	})
 
 	})

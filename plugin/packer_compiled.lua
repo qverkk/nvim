@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gruvbox-material"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme gruvbox-material\bcmd\bvim\0" },
     loaded = true,
@@ -159,6 +164,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-fzf-writer.nvim"] = {
+    loaded = true,
+    path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/telescope-fzf-writer.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-writer.nvim"
+  },
+  ["telescope-live-grep-args.nvim"] = {
+    loaded = true,
+    path = "/home/qverkk/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
+    url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
   },
   ["telescope-ui-select.nvim"] = {
     loaded = true,

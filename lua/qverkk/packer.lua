@@ -27,7 +27,13 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
-		requires = { { "nvim-lua/plenary.nvim" } },
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope-fzf-writer.nvim", run = "make" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+			{ "nvim-telescope/telescope-live-grep-args.nvim" }
+
+		},
 	})
 
 	-- telescope ui select
@@ -45,6 +51,12 @@ return require("packer").startup(function(use)
 	-- commenter
 	use("numToStr/Comment.nvim")
 
+	-- gitsigns
+	use {
+		'lewis6991/gitsigns.nvim',
+		-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+	}
+
 	-- lsp
 	use("neovim/nvim-lspconfig")
 
@@ -59,14 +71,14 @@ return require("packer").startup(function(use)
 	use {
 		"hrsh7th/nvim-cmp",
 		requires = {
-			{"hrsh7th/cmp-nvim-lsp"},
-			{"hrsh7th/cmp-buffer"},
-			{"hrsh7th/cmp-path"},
-			{"hrsh7th/cmp-cmdline"},
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-cmdline" },
 
 			-- snippet support
-			{"hrsh7th/cmp-vsnip"},
-			{"hrsh7th/vim-vsnip"}
-		 }
-	 }
+			{ "hrsh7th/cmp-vsnip" },
+			{ "hrsh7th/vim-vsnip" }
+		}
+	}
 end)
