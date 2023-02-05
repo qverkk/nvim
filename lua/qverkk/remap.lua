@@ -38,6 +38,7 @@ bind("i", "<a-q>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", {})
 bind("n", "<a-i>", "<cmd>:Telescope lsp_implementations<cr>", opt)
 bind("n", "<a-d>", "<cmd>:Telescope lsp_definitions<cr>", opt)
 bind("n", "<a-r>", "<cmd>:Telescope lsp_references<cr>", opt)
+bind("n", "<a-c>", "<cmd>:Telescope lsp_dynamic_workspace_symbols<cr>", opt)
 
 -- diagnostics
 bind("n", "<a-c-q>", "<cmd>:Telescope diagnostics<cr>", {})
