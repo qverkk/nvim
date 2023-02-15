@@ -22,17 +22,18 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("lukas-reineke/indent-blankline.nvim")
+
 
 	-- search
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.x",
 		requires = {
 			{ "nvim-lua/plenary.nvim" },
-			{ "nvim-telescope/telescope-fzf-writer.nvim", run = "make" },
-			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+			{ "nvim-telescope/telescope-fzf-writer.nvim",    run = "make" },
+			{ "nvim-telescope/telescope-fzf-native.nvim",    run = "make" },
 			{ "nvim-telescope/telescope-live-grep-args.nvim" }
-
 		},
 	})
 
@@ -58,11 +59,14 @@ return require("packer").startup(function(use)
 	}
 
 	-- lsp
-	use("neovim/nvim-lspconfig")
-
-	-- mason
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
+	use {
+		'neovim/nvim-lspconfig',
+		requires = {
+			-- Automatically install LSPs to stdpath for neovim
+			'williamboman/mason.nvim',
+			'williamboman/mason-lspconfig.nvim',
+		},
+	}
 
 	-- java lsp
 	use("mfussenegger/nvim-jdtls")
