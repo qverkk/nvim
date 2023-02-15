@@ -1,7 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"sumneko_lua",
+		"lua_ls",
 		"jdtls",
 		"kotlin_language_server",
 		"rust_analyzer"
@@ -9,7 +9,7 @@ require("mason-lspconfig").setup({
 })
 
 
-require("lspconfig").sumneko_lua.setup {}
+require("lspconfig").lua_ls.setup {}
 require("lspconfig").kotlin_language_server.setup {}
 require("lspconfig").rust_analyzer.setup {}
 
