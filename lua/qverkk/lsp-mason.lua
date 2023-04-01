@@ -12,6 +12,7 @@ require("mason-lspconfig").setup({
 require("lspconfig").lua_ls.setup {}
 require("lspconfig").kotlin_language_server.setup {}
 require("lspconfig").rust_analyzer.setup {}
+require("lspconfig").bashls.setup {}
 
 -- java
 local java_mappings_on_attach = function(_, _)
